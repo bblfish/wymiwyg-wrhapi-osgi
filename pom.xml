@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>org.wymiwyg</groupId>
 			<artifactId>wrhapi-testing</artifactId>
-			<version>0.7</version>
+			<version>0.8-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -51,6 +51,25 @@
 			<version>1.5.5</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.ops4j.pax.exam</groupId>
+			<artifactId>pax-exam</artifactId>
+			<version>1.1.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.ops4j.pax.exam</groupId>
+			<artifactId>pax-exam-junit</artifactId>
+			<version>1.1.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.ops4j.pax.exam</groupId>
+			<artifactId>pax-exam-container-default</artifactId>
+			<version>1.1.0</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -89,6 +108,19 @@
 						<id>generate-scr-scrdescriptor</id>
 						<goals>
 							<goal>scr</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- use pax exam maven plugin -->
+			<plugin>
+				<groupId>org.ops4j.pax.exam</groupId>
+				<artifactId>maven-paxexam-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>generate-config</id>
+						<goals>
+							<goal>generate-depends-file</goal>
 						</goals>
 					</execution>
 				</executions>

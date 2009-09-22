@@ -34,6 +34,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+import org.osgi.service.component.ComponentContext;
 import org.osgi.service.http.HttpService;
 import org.osgi.service.http.NamespaceException;
 import org.wymiwyg.wrhapi.Handler;
@@ -130,6 +131,10 @@ public class OsgiWebServerFactory extends WebServerFactory {
 		}
 
 		return new OsgiWebServer(httpService, "/");
+	}
+
+	protected void deactivate(ComponentContext context) {
+		httpService.unregister("/");
 	}
 
 	private void commitStatusAndHeaders(
