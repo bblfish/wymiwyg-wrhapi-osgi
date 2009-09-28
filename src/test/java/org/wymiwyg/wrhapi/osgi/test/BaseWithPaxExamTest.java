@@ -36,19 +36,26 @@ import org.wymiwyg.wrhapi.osgi.OsgiWebServerFactory;
 import org.wymiwyg.wrhapi.test.BaseTests;
 
 @RunWith(JUnit4TestRunner.class)
-public class MyJUnitTest extends BaseTests {
+public class BaseWithPaxExamTest extends BaseTests {
 
 	@Inject
 	private BundleContext bundleContext;
 
 	@Configuration
 	public static Option[] configuration() {
+		System.out.println(mavenConfiguration().getURL());
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException ex) {
+			Logger.getLogger(BaseWithPaxExamTest.class.getName()).log(Level.SEVERE, null, ex);
+		}
 		return options(
+				mavenConfiguration(),
 				mavenBundle().groupId("org.wymiwyg").artifactId("wrhapi-osgi").versionAsInProject(),
 				mavenBundle().groupId("org.wymiwyg").artifactId("wrhapi").versionAsInProject(),
 				mavenBundle().groupId("org.wymiwyg").artifactId("wrhapi-testing").versionAsInProject(),
 				mavenBundle().groupId("org.wymiwyg").artifactId("wymiwyg-commons-core").versionAsInProject(),
-				mavenBundle().groupId("org.trialox.ext").artifactId("com.ibm.icu"),
+				mavenBundle().groupId("org.trialox.ext").artifactId("com.ibm.icu").versionAsInProject(),
 				mavenBundle().groupId("org.apache.httpcomponents").artifactId("httpclient-osgi").versionAsInProject(),
 				mavenBundle().groupId("org.apache.httpcomponents").artifactId("httpcore-osgi"),
 				/*mavenBundle().groupId("org.apache.felix").artifactId("org.apache.felix.webconsole"),*/
