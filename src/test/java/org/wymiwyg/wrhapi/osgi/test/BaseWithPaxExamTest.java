@@ -16,8 +16,6 @@
  */
 package org.wymiwyg.wrhapi.osgi.test;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,7 +26,6 @@ import static org.ops4j.pax.exam.junit.JUnitOptions.*;
 import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.junit.Configuration;
 import org.ops4j.pax.exam.junit.JUnit4TestRunner;
-import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
 import org.wymiwyg.wrhapi.WebServerFactory;
@@ -43,12 +40,6 @@ public class BaseWithPaxExamTest extends BaseTests {
 
 	@Configuration
 	public static Option[] configuration() {
-		System.out.println(mavenConfiguration().getURL());
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException ex) {
-			Logger.getLogger(BaseWithPaxExamTest.class.getName()).log(Level.SEVERE, null, ex);
-		}
 		return options(
 				mavenConfiguration(),
 				mavenBundle().groupId("org.wymiwyg").artifactId("wrhapi-osgi").versionAsInProject(),
