@@ -20,12 +20,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.nio.ByteBuffer;
 import java.nio.channels.Channels;
 import java.nio.channels.WritableByteChannel;
 
-import java.util.Enumeration;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
