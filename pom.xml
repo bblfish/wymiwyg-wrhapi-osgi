@@ -8,14 +8,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.wymiwyg</groupId>
 	<artifactId>wrhapi-osgi</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<packaging>bundle</packaging>
 	<name>WRHAPI OSGi</name>
 	<dependencies>
 		<dependency>
 			<groupId>org.wymiwyg</groupId>
 			<artifactId>wrhapi</artifactId>
-			<version>0.8-SNAPSHOT</version>
+			<version>0.8</version>
 		</dependency>
 
 		<dependency>
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.wymiwyg</groupId>
 			<artifactId>wrhapi-testing</artifactId>
-			<version>0.8-SNAPSHOT</version>
+			<version>0.8</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
