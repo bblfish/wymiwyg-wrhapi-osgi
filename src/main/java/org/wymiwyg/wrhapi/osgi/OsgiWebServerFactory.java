@@ -107,9 +107,6 @@ public class OsgiWebServerFactory extends WebServerFactory {
 							headersWritten[0] = true;
 						}
 					});
-					ByteArrayOutputStream baos = new ByteArrayOutputStream();
-					WritableByteChannel outChannel2 = Channels.newChannel(baos);
-					body.writeTo(outChannel2);
 					body.writeTo(fwOut);
 				}
 
