@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<parent>
+		<groupId>org.wymiwyg</groupId>
+		<artifactId>wrhapi-osgi-parent</artifactId>
+		<version>0.3</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.wymiwyg</groupId>
+	<artifactId>wrhapi-osgi</artifactId>
+	<version>0.3</version>
+	<packaging>bundle</packaging>
+	<name>WRHAPI OSGi Core</name>
+	<description>WRHAPI implementation on OSGi http servicet</description>
+	<dependencies>
+		<dependency>
+			<groupId>org.wymiwyg</groupId>
+			<artifactId>wrhapi</artifactId>
+			<version>0.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<type>jar</type>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+<!-- 				<version>1.2.1</version> -->
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-scr-plugin</artifactId>
+				<version>1.2.0</version>
+				<executions>
+					<execution>
+						<id>generate-scr-scrdescriptor</id>
+						<goals>
+							<goal>scr</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<scm>
+		<developerConnection>scm:svn:https://svn.berlios.de/svnroot/repos/wrhapi/</developerConnection>
+		<connection>scm:svn:http://svn.berlios.de/svnroot/repos/wrhapi/</connection>
+		<url>http://svn.berlios.de/svnroot/repos/wrhapi/</url>
+	</scm>
+</project>
+
