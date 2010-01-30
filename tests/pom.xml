@@ -12,6 +12,7 @@
 	<packaging>jar</packaging>
 	<name>WRHAPI OSGi Tests</name>
 	<description>Pax-exam Tests for WRHAPI implementation on OSGi http service</description>
+	<url>http://wrahpi.wymiwyg.org/</url>
 	<dependencies>
 		<dependency>
 			<groupId>org.wymiwyg</groupId>
@@ -151,5 +152,12 @@
 		<connection>scm:svn:http://svn.berlios.de/svnroot/repos/wrhapi/</connection>
 		<url>http://svn.berlios.de/svnroot/repos/wrhapi/</url>
 	</scm>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 </project>
 
