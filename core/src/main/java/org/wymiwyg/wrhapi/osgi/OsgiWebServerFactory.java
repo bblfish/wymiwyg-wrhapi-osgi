@@ -59,6 +59,8 @@ public class OsgiWebServerFactory extends WebServerFactory {
 	 */
 	private HttpService httpService;
 
+	private boolean servletRegistered = false;
+
 	/* (non-Javadoc)
 	 * @see org.wymiwyg.wrhapi.WebServerFactory#startNewWebServer(org.wymiwyg.wrhapi.Handler, org.wymiwyg.wrhapi.ServerBinding)
 	 */
@@ -118,6 +120,7 @@ public class OsgiWebServerFactory extends WebServerFactory {
 		};
 		try {
 			httpService.registerServlet("/", servlet, null, null);
+			servletRegistered = true;
 		} catch (ServletException ex) {
 			throw new IOException(ex);
 		} catch (NamespaceException ex) {
@@ -128,7 +131,10 @@ public class OsgiWebServerFactory extends WebServerFactory {
 	}
 
 	protected void deactivate(ComponentContext context) {
-		httpService.unregister("/");
+		if (servletRegistered) {
+			httpService.unregister("/");
+			servletRegistered = false;
+		}
 	}
 
 	private void commitStatusAndHeaders(
