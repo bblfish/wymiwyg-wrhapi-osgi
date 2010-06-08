@@ -12,7 +12,7 @@
 	<packaging>pom</packaging>
 	<name>WRHAPI OSGi Parent</name>
 	<description>WRHAPI implementation on OSGi http service, parent project</description>
-	<url>http://wrahpi.wymiwyg.org/</url>
+	<url>http://wrhapi.wymiwyg.org/</url>
 	<modules>
 		<module>core</module>
 		<module>tests</module>
@@ -48,7 +48,7 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-scr-plugin</artifactId>
-				<version>1.2.0</version>
+				<version>1.4.4</version>
 				<executions>
 					<execution>
 						<id>generate-scr-scrdescriptor</id>
