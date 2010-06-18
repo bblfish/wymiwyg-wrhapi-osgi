@@ -132,7 +132,14 @@ public class OsgiWebServerFactory extends WebServerFactory {
 
 	protected void deactivate(ComponentContext context) {
 		if (servletRegistered) {
-			httpService.unregister("/");
+			try {
+				httpService.unregister("/");
+			} catch (IllegalArgumentException e) {
+				//this is thrown by 
+				//org.eclipse.equinox.http.servlet.internal.HttpServiceImpl
+				//when the underlying adaptor servlet has been restarted
+				log.finer(e.toString());
+			}
 			servletRegistered = false;
 		}
 	}

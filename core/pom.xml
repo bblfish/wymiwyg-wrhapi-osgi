@@ -8,11 +8,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.wymiwyg</groupId>
 	<artifactId>wrhapi-osgi</artifactId>
-	<version>0.4</version>
+	<version>0.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	<name>WRHAPI OSGi Core</name>
 	<description>WRHAPI implementation on OSGi http servicet</description>
-	<url>http://wrahpi.wymiwyg.org/</url>
+	<url>http://wrhapi.wymiwyg.org/</url>
 	<dependencies>
 		<dependency>
 			<groupId>org.wymiwyg</groupId>
@@ -67,7 +67,7 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-scr-plugin</artifactId>
-				<version>1.2.0</version>
+				<version>1.4.4</version>
 				<executions>
 					<execution>
 						<id>generate-scr-scrdescriptor</id>
