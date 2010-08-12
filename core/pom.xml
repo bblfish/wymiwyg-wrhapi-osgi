@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.wymiwyg</groupId>
 		<artifactId>wrhapi-osgi-parent</artifactId>
-		<version>0.3</version>
+		<version>0.4-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.wymiwyg</groupId>
@@ -79,11 +79,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	<scm>
-		<developerConnection>scm:svn:https://svn.berlios.de/svnroot/repos/wrhapi/</developerConnection>
-		<connection>scm:svn:http://svn.berlios.de/svnroot/repos/wrhapi/</connection>
-		<url>http://svn.berlios.de/svnroot/repos/wrhapi/</url>
-	</scm>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
