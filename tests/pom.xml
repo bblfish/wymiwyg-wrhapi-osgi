@@ -3,12 +3,12 @@
 	<parent>
 		<artifactId>wrhapi-osgi-parent</artifactId>
 		<groupId>org.wymiwyg</groupId>
-		<version>0.4</version>
+		<version>0.4.1-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.wymiwyg</groupId>
 	<artifactId>wrhapi-osgi-tests</artifactId>
-	<version>0.4</version>
+	<version>0.4.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>WRHAPI OSGi Tests</name>
 	<description>Pax-exam Tests for WRHAPI implementation on OSGi http service</description>
@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>org.wymiwyg</groupId>
 			<artifactId>wrhapi-osgi</artifactId>
-			<version>0.4.1</version>
+			<version>0.4.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.osgi</groupId>

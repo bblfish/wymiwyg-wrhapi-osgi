@@ -3,12 +3,12 @@
 	<parent>
 		<groupId>org.wymiwyg</groupId>
 		<artifactId>wrhapi-osgi-parent</artifactId>
-		<version>0.4</version>
+		<version>0.4.1-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.wymiwyg</groupId>
 	<artifactId>wrhapi-osgi</artifactId>
-	<version>0.4.1</version>
+	<version>0.4.2-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	<name>WRHAPI OSGi Core</name>
 	<description>WRHAPI implementation on OSGi http servicet</description>
