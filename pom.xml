@@ -8,7 +8,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.wymiwyg</groupId>
 	<artifactId>wrhapi-osgi-parent</artifactId>
-	<version>0.4.1-SNAPSHOT</version>
+	<version>0.4.2</version>
 	<packaging>pom</packaging>
 	<name>WRHAPI OSGi Parent</name>
 	<description>WRHAPI implementation on OSGi http service, parent project</description>
@@ -78,9 +78,9 @@
 		</plugins>
 	</build>
 	<scm>
-		<developerConnection>scm:svn:https://svn.berlios.de/svnroot/repos/wrhapi/wrhapi-osgi/trunk</developerConnection>
-		<connection>scm:svn:http://svn.berlios.de/svnroot/repos/wrhapi/wrhapi-osgi/trunk</connection>
-		<url>http://svn.berlios.de/viewvc/wrhapi/wrhapi-osgi/trunk/</url>
+		<developerConnection>scm:svn:https://svn.berlios.de/svnroot/repos/wrhapi/wrhapi-osgi/tags/wrhapi-osgi-parent-0.4.2</developerConnection>
+		<connection>scm:svn:http://svn.berlios.de/svnroot/repos/wrhapi/wrhapi-osgi/tags/wrhapi-osgi-parent-0.4.2</connection>
+		<url>http://svn.berlios.de/viewvc/wrhapi/wrhapi-osgi/tags/wrhapi-osgi-parent-0.4.2</url>
 	</scm>
 	<licenses>
 		<license>
