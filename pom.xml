@@ -13,10 +13,27 @@
 	<name>WRHAPI OSGi Parent</name>
 	<description>WRHAPI implementation on OSGi http service, parent project</description>
 	<url>http://wrhapi.wymiwyg.org/</url>
-	<modules>
-		<module>core</module>
-		<module>tests</module>
-	</modules>
+	<profiles>
+		<profile>
+			<id>release</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>core</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>test</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>tests</module>
+			</modules>
+		</profile>
+	</profiles>
+
 	<build>
 		<plugins>
 			<plugin>
