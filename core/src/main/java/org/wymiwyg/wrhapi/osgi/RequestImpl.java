@@ -164,4 +164,8 @@ public class RequestImpl implements Request {
 		return (X509Certificate[])servletRequest.getAttribute(
 				"javax.servlet.request.X509Certificate");
 	}
+
+    public Object getAttribute(String name)  {
+        return servletRequest.getAttribute(name);
+    }
 }
